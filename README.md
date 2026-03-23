@@ -11,9 +11,7 @@ This project solves a combinatorics problem in a crafting system.
 - There are hundreds of possible ingredients
 - Different orders produce different results
 
-If you attempt to evaluate every possible ordered configuration from a large ingredient pool, the problem trends toward:
-
-O(n^n)
+If you attempt to evaluate every possible ordered configuration from a large ingredient pool you would have a permutations problem.
 
 ---
 
@@ -26,10 +24,7 @@ Instead of evaluating every ordered permutation directly, I restructured the sea
 Before considering order, I compute an unordered approximation score for ingredient sets.
 
 This acts as a coarse filter that eliminates weak combinations early.
-
-This reduces the effective search from something resembling O(n^n) toward a factorial search space:
-
-O(n!)
+This reduces the problem from a permutations problem to a combinations problem.
 
 While still large, this is dramatically more manageable in practice.
 
